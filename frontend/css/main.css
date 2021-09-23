@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blockInput{
+    background-color: chartreuse;
+    margin: 5px;
+    width: 50vw;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <form action="" id="form-registro" name="myForm">
+        <h1>REGISTRO</h1>
+        <div class="blockInput">
+            <label for="">Tipo de documento</label>
+            <select name="documentType" id="documentType">
+                <option value="CC">Cédula de ciudania</option>
+                <option value="CE">Cédula de extranjería</option>
+                <option value="PA">Pasaporte</option>
+                <option value="OT">Otro</option>
+            </select>
+        </div>
+        <div class="blockInput">
+            <label for="document">Número de documento</label>
+            <input type="number" id="documento">
+        </div>
+        <div class="blockInput">
+            <label for="email">Correo electrónico</label>
+            <input type="mail" id="email">
+        </div>
+        <div class="blockInput">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" name="" id="contrasena">
+        </div>
+        <button id="btn-registrar">
+            Registrar
+        </button>
+    </form>
+
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>

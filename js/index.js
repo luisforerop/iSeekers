@@ -14,7 +14,7 @@ let documentNumberChecked = false;
 
 
 password.addEventListener('input', (e)=>{
-    passwordChecked = checkContrasena(e.target.value)    
+    passwordChecked = checkContrasena(e.target.value)
 })
 
 email.addEventListener('input', (e)=>{

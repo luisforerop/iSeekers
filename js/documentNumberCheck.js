@@ -12,4 +12,4 @@ const checkNumDocumento = (valor, tipo) => {
     return // verdadero o falso
 }
 
-export default checkNumDocumento;
+export default checkNumDocumento; 

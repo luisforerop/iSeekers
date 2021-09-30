@@ -12,4 +12,6 @@ const checkNumDocumento = (valor, tipo) => {
     return // verdadero o falso
 }
 
+checkNumDocumento(3546, 'CC')
+
 export default checkNumDocumento;

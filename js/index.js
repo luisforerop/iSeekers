@@ -1,4 +1,5 @@
 import { checkContrasena, checkCorreo, checkNumDocumento } from './form.js'
+import { agregarRegistro } from './registro'
 
 // NODOS
 const password = document.getElementById('contrasena')
@@ -11,7 +12,6 @@ const submitButton = document.getElementById('btn-registrar')
 let emailChecked = false;
 let passwordChecked = false;
 let documentNumberChecked = false;
-
 
 password.addEventListener('input', (e)=>{
     passwordChecked = checkContrasena(e.target.value)    
@@ -26,8 +26,20 @@ documentNumber.addEventListener('input', (e)=>{
 })
 
 submitButton.addEventListener('click', (e) => {
-    const checkedState = emailChecked && passwordChecked && documentNumberChecked;
     e.preventDefault()
+    const infoRegistro = {
+        type: documentType.value,
+        document: documentNumber.value,
+        email: email.value,
+        password: password.value
+    }
+    agregarRegistro(infoRegistro);
+    db.sort()
+
+    console.log(infoRegistro);
+    const checkedState = emailChecked && passwordChecked && documentNumberChecked;
+    console.log(email.value);
     console.log(checkedState ? 'validado': 'no validado');
+
 
 })

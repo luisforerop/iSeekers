@@ -1,0 +1,1 @@
+select * FROM Usuarios WHERE Tipo_documento='P' ORDER BY num_documento ASC;

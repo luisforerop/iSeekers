@@ -1,12 +1,22 @@
-// export { default as agregarRegistro }
-var db = []
+let registros = []
+exports.registros = registros;
 
-const agregarRegistro = item => db.push(item)
-const ordenarArreglo = arreglo => arreglo.sort()
-const filtrarCorreo = arreglo => arreglo.filter(registro => registro.correo.includes('@email.com'))
-const obtenerRegPasaporte = arreglo => arreglo.filter(registro => registro.tipoDocumento === 'pasaporte')
+exports.agregarRegistro = () => {
+    const { value: password } = document.getElementById('contrasena')
+    const { value: email } = document.getElementById('correo')
+    const { value: num_documento } = document.getElementById('numero-documento')
+    const { value: documentType } = document.getElementById('tipo-documento')
+    registros.push(({
+        password,
+        email,
+        num_documento,
+        documentType
+    }))
+}
 
-modules.exports.agregarRegistro = agregarRegistro;
-modules.exports.ordenarArreglo = ordenarArreglo;
-modules.exports.filtrarCorreo = filtrarCorreo;
-modules.exports.obtenerRegPasaporte = obtenerRegPasaporte;
+exports.ordenarArreglo = registersList => registersList.sort((a, b) => 
+a.documentType !== 'P' ? 0 : a.num_documento > b.num_documento ? 1 : a.num_documento < b.num_documento ? -1 : 0) 
+
+exports.filtrarCorreo = registersList => registersList.filter(registro => registro.email.includes('@email.com'))
+
+exports.obtenerRegPasaporte = registersList => registersList.filter(registro => registro.documentType === 'P')
